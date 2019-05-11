@@ -5,6 +5,6 @@ import { databaseProviders } from './database/database.providers';
 
 @Module({
   imports: [CommonModule, UsersModule],
-  providers: [...databaseProviders]
+  providers: [...databaseProviders],
 })
 export class AppModule {}
