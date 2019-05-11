@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+dist/
+
+database.sqlite
+yarn-error.log
+
+.DS_Store

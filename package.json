@@ -1,0 +1,67 @@
+{
+  "name": "nestjs-starter",
+  "version": "1.0.0",
+  "description": "Nest TypeScript starter repository",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "prestart:prod": "rimraf dist && npm run build",
+    "start:prod": "node dist/main.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "test:cov": "jest --coverage --passWithNoTests"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.0.5",
+    "@nestjs/core": "^6.0.5",
+    "@nestjs/microservices": "6.0.2",
+    "@nestjs/platform-express": "6.0.2",
+    "@nestjs/websockets": "6.0.2",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.5",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "2.6.3",
+    "rxjs": "^6.4.0",
+    "sequelize": "^5.1.0",
+    "sequelize-typescript": "^0.6.8",
+    "sqlite3": "^4.0.8",
+    "uuid": "^3.3.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "6.0.1",
+    "@types/express": "4.16.1",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.4",
+    "@types/sequelize": "^4.27.44",
+    "@types/supertest": "2.0.7",
+    "@types/uuid": "^3.4.4",
+    "jest": "24.5.0",
+    "nodemon": "1.18.10",
+    "prettier": "1.16.4",
+    "supertest": "4.0.2",
+    "ts-jest": "24.0.0",
+    "ts-node": "8.0.3",
+    "tsconfig-paths": "3.8.0",
+    "tslint": "5.14.0",
+    "typescript": "3.3.4000"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
